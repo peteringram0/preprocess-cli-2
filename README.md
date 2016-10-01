@@ -1,5 +1,5 @@
-preprocess-cli
-==========
+preprocess-cli-2
+================
 
 CLI wrapper for [preprocess](https://github.com/jsoverson/preprocess).
 
