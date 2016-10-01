@@ -16,7 +16,3 @@ Options:
   -t, --type                        The syntax type of source string to preprocess.                             [default: "html"]
   -c, --context                     Context file: must be js or json. Defaults to process.env.     
 ```
-
-License
--------
-Released under permissive MIT License.
