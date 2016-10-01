@@ -1,16 +1,9 @@
 {
-  "author": {
-    "name": "András Tarsoly",
-    "email": "tarsolya@gmail.com"
-  },
-  "name": "preprocess-cli",
+  "author": "Florian Klampfer <f.klampfer@gmail.com>",
+  "name": "preprocess-cli-2",
   "description": "CLI wrapper for preprocess",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:tarsolya/preprocess-cli.git"
-  },
   "keywords": [
     "preprocess",
     "cli",
@@ -25,5 +18,17 @@
   },
   "bin": {
     "preprocess": "./bin/preprocess"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Warning: no test specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qwtel/preprocess-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/qwtel/preprocess-cli/issues"
+  },
+  "homepage": "https://github.com/qwtel/preprocess-cli#readme"
 }
