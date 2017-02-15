@@ -2,7 +2,7 @@
   "author": "Florian Klampfer <f.klampfer@gmail.com>",
   "name": "preprocess-cli-2",
   "description": "CLI wrapper for preprocess",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "license": "MIT",
   "keywords": [
     "preprocess",
