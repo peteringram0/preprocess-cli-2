@@ -28,9 +28,13 @@ var argv = optimist
   .describe('t', 'The syntax type of source string to preprocess.')
   .default('t', 'html')
 
-  .alias('c', 'context')
-  .string('c')
-  .describe('c', 'Context file: must be js or json. Defaults to process.env.')
+  .alias('d', 'context')
+  .string('d')
+  .describe('d', 'Context Object')
+
+  .alias('e', 'env')
+  .string('e')
+  .describe('e', 'Enviroment file')
 
   .argv;
 
@@ -43,16 +47,23 @@ if (argv._.length === 0 || argv.help) {
 var sourcePath = path.resolve(argv._[0]);
 
 var outPath;
-
 if (argv.o) {
   outPath = path.resolve(argv.o);
 }
 
-var contextPath;
-
-if (argv.c) {
-  contextPath = path.resolve(argv.c);
+var context;
+if (argv.d) {
+  context = JSON.parse(argv.d);
 }
+
+var env;
+if (argv.e) {
+  env = path.resolve(argv.e);
+  env = require(env);
+}
+
+// Merge the context with the enviroment
+var merged = Object.assign(context, env);
 
 // options
 var options = {
@@ -65,13 +76,10 @@ if (argv['src-eol']) {
   options.srcEol = argv['src-eol'];
 }
 
-// context
-var context = contextPath;
-
 // run
 if (outPath) {
-  pp.preprocessFileSync(sourcePath, outPath, context, options);
+  pp.preprocessFileSync(sourcePath, outPath, merged, options);
 } else {
   var source = fs.readFileSync(sourcePath);
-  console.log(pp.preprocess(source, context, options));
+  console.log(pp.preprocess(source, merged, options));
 }
