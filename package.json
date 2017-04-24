@@ -1,6 +1,6 @@
 {
-  "author": "Florian Klampfer <f.klampfer@gmail.com>",
-  "name": "preprocess-cli-2",
+  "author": "Peter Ingram <peter.ingram0@gmail.com>",
+  "name": "preprocess-cli-extended",
   "description": "CLI wrapper for preprocess",
   "version": "2.0.1",
   "license": "MIT",
