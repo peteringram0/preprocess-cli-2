@@ -51,18 +51,17 @@ if (argv.o) {
   outPath = path.resolve(argv.o);
 }
 
-var context;
+var context = {}
 if (argv.d) {
   context = JSON.parse(argv.d);
 }
 
-var env;
+var env = {}
 if (argv.e) {
   env = path.resolve(argv.e);
   env = require(env);
 }
 
-// Merge the context with the enviroment
 var merged = Object.assign(context, env);
 
 // options

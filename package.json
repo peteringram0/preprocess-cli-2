@@ -2,7 +2,7 @@
   "author": "Peter Ingram <peter.ingram0@gmail.com>",
   "name": "preprocess-cli-extended",
   "description": "CLI wrapper for preprocess",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "license": "MIT",
   "keywords": [
     "preprocess",
